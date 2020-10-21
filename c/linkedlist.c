@@ -89,12 +89,23 @@ void reverse(struct node **head){
     *head = prev;
 }
 
-void printList(struct node *head){
-    while(head != NULL){
-        printf("%d ", head->data);
-        head = head->link;
+void print(node *header)
+{
+    if(header == NULL)
+    {
+        printf("List is empty\n");
     }
-}
+    else
+    {
+        while(header!=NULL)
+        {
+            printf("%d->",header->data);
+            header = header->link;
+        }
+        printf("END\n");
+    }
+    
+}z
 
 int main(){
     
